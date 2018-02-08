@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="Sold">Sold</string>
+    <string name="add_item">Add Item</string>
+    <string name="food_category">Food</string>
+    <string name="clothing_category">Clothing</string>
+    <string name="electronics_category">Electronics</string>
+    <string name="automotive_category">Automotive</string>
+    <string name="name_header">Item Name</string>
+    <string name="quantity_header">How Many?</string>
+    <string name="price_header">How Much?</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save Item</string>
+    <string name="item_insert_failed">Could not add item</string>
+    <string name="item_insert_successful">Item added successfully!</string>
+    <string name="quantity_textview_header">Quantity:</string>
+    <string name="detail_quantity">Quantity:</string>
+    <string name="order_button">Order More</string>
+    <string name="delete_button">Delete Item</string>
+    <string name="delete_dialog_msg">Delete this item?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_view_title_text">There are no items in the inventory</string>
+    <string name="empty_view_subtitle_text">Try to add some :)</string>
+    <string name="item_add_successful">Item added successfully!</string>
+    <string name="item_add_needs_more_info">Please fill out all information.</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="rotate_picture">Rotate Picture</string>
+</resources>

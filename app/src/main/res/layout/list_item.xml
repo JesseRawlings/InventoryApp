@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/name_leftMargin_size"
+        android:layout_marginTop="@dimen/name_topMargin_size"
+        android:textColor="@color/black"
+        android:textSize="@dimen/item_name_textsize"/>
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name_textview"
+        android:layout_marginLeft="@dimen/price_leftMargin_size"
+        android:layout_marginTop="@dimen/price_topMargin_size"
+        android:textColor="@color/black"
+        android:textSize="@dimen/item_price_textsize"/>
+
+    <Button
+        android:id="@+id/sale_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/button_margin"
+        android:text="@string/Sold"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/quantity_margin_size"
+        android:layout_toLeftOf="@+id/sale_button">
+
+        <TextView
+            android:id="@+id/quantity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/quantity_textview_header"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_price_textsize"/>
+
+        <TextView
+            android:id="@+id/quantity_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_header"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_price_textsize"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

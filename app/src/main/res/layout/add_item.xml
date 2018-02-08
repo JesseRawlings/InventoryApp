@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <TextView
+        android:id="@+id/add_item_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/category_header_margin_size"
+        android:text="@string/add_item"
+        android:textColor="@color/black"
+        android:textSize="@dimen/category_header_text_size"/>
+
+    <Button
+        android:id="@+id/select_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_item_header"
+        android:layout_marginLeft="@dimen/picture_button_marginLeft"
+        android:layout_marginTop="@dimen/picture_button_marginTop"
+        android:text="@string/select_picture"
+        android:textColor="@color/black"
+        android:textSize="@dimen/picture_button_textSize"/>
+
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_below="@id/add_item_header"
+        android:layout_marginLeft="@dimen/layout_leftmargin"
+        android:layout_marginTop="@dimen/image_topmargin"
+        android:layout_toRightOf="@id/select_picture_button"
+        android:rotation="@dimen/image_rotation"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/item_name_topMargin_size"
+        android:text="@string/name_header"
+        android:textColor="@color/black"
+        android:textSize="@dimen/category_header_text_size"/>
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/name_editText_size"
+        android:layout_below="@+id/name_header"
+        android:layout_margin="@dimen/name_editText_margin"
+        android:background="@color/white"
+        android:gravity="center"
+        android:inputType="textCapWords"/>
+
+    <TextView
+        android:id="@+id/quantity_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name_editText"
+        android:layout_marginLeft="@dimen/quantity_header_marginLeft"
+        android:layout_marginTop="@dimen/quantity_header_marginTop"
+        android:text="@string/quantity_header"
+        android:textColor="@color/black"
+        android:textSize="@dimen/quantity_header_text_size"/>
+
+    <EditText
+        android:id="@+id/quantity_editText"
+        android:layout_width="@dimen/quantity_editText_Width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/quantity_header"
+        android:layout_marginLeft="@dimen/quantity_editText_marginLeft"
+        android:layout_marginTop="@dimen/quantity_editText_marginTop"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:textSize="@dimen/name_editText_size"/>
+
+    <TextView
+        android:id="@+id/price_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/name_editText"
+        android:layout_marginRight="@dimen/price_header_marginRight"
+        android:layout_marginTop="@dimen/quantity_header_marginTop"
+        android:text="@string/price_header"
+        android:textColor="@color/black"
+        android:textSize="@dimen/quantity_header_text_size"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/layout_editText_Width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/quantity_header"
+        android:layout_marginRight="@dimen/price_editText_marginRight"
+        android:layout_marginTop="@dimen/price_editText_marginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dollarSign_margin_size"
+            android:text="$"
+            android:textSize="@dimen/dollarSign_size"/>
+
+        <EditText
+            android:id="@+id/price_editText"
+            android:layout_width="@dimen/quantity_editText_Width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/name_editText_size"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cancel_save_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity_editText"
+        android:layout_marginTop="@dimen/cancel_save_buttonMargin"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/cancel_button_width"
+            android:layout_height="@dimen/cancel_button_height"
+            android:layout_marginRight="@dimen/button_seperation"
+            android:text="@string/cancel_button"
+            android:textSize="@dimen/cancel_button_textSize"/>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="@dimen/save_button_width"
+            android:layout_height="@dimen/save_button_height"
+            android:layout_marginLeft="@dimen/button_seperation"
+            android:layout_toRightOf="@+id/cancel_button"
+            android:text="@string/save_button"
+            android:textSize="@dimen/save_button_textSize"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

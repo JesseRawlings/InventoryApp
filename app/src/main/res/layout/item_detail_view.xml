@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/detail_name_marginLeft"
+        android:layout_marginTop="@dimen/detail_name_marginTop"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_detail_name_textSize"/>
+
+    <TextView
+        android:id="@+id/detail_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_name"
+        android:layout_marginLeft="@dimen/detail_name_marginLeft"
+        android:layout_marginTop="@dimen/detail_name_marginTop"
+        android:textColor="@color/black"
+        android:textSize="@dimen/detail_price_textSize"/>
+
+    <TextView
+        android:id="@+id/detail_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_price"
+        android:layout_marginLeft="@dimen/detail_name_marginLeft"
+        android:layout_marginTop="@dimen/detail_name_marginTop"
+        android:text="@string/detail_quantity"
+        android:textColor="@color/black"
+        android:textSize="@dimen/detail_price_textSize"/>
+
+    <RelativeLayout
+        android:id="@+id/quantity_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_price"
+        android:layout_marginLeft="@dimen/detail_quantity_pickerTopMargin"
+        android:layout_marginTop="@dimen/detail_quantity_pickerTopMargin"
+        android:layout_toRightOf="@+id/detail_quantity">
+
+        <Button
+            android:id="@+id/minus_button"
+            android:layout_width="@dimen/quantity_size"
+            android:layout_height="@dimen/quantity_size"
+            android:text="-"
+            android:textSize="@dimen/quantity_button_size"/>
+
+        <TextView
+            android:id="@+id/quantity_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/minus_button"
+            android:padding="@dimen/quantity_detail_padding"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_price_textSize"/>
+
+        <Button
+            android:id="@+id/plus_button"
+            android:layout_width="@dimen/quantity_size"
+            android:layout_height="@dimen/quantity_size"
+            android:layout_toRightOf="@id/quantity_number"
+            android:text="+"
+            android:textSize="@dimen/quantity_button_size"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity_picker"
+        android:layout_marginLeft="@dimen/order_button_leftMargin"
+        android:layout_marginTop="@dimen/order_button_topMargin"
+        android:text="@string/order_button"
+        android:textSize="@dimen/order_button_textSize"/>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="@dimen/delete_button_width"
+        android:layout_height="@dimen/delete_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/quantity_picker"
+        android:layout_marginRight="@dimen/delete_button_rightMargin"
+        android:layout_marginTop="@dimen/delete_button_topMargin"
+        android:background="@color/red"
+        android:text="@string/delete_button"
+        android:textSize="@dimen/order_button_textSize"/>
+
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="@dimen/item_detail_image_width"
+        android:layout_height="@dimen/item_detail_image_height"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/order_button"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
